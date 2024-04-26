@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am Waiting For Your Answer</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking the CSS file -->
+</head>
+
+<body>
+    <audio controls autoplay loop>
+        <source src="song.mp3" type="audio/mpeg"> 
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        alert("Play The Song Sweety!❤️");
+        document.addEventListener('mousemove', function (e) {
+            let body = document.querySelector('body');
+            let heart = document.createElement('span');
+            let x = e.clientX;
+            let y = e.clientY;
+            // heart.style.position = "fixed"; // Making it follow the mouse cursor
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+
+            let size = Math.random() * 80;
+            heart.style.width = 20 + size + 'px';
+            heart.style.height = 20 + size + 'px';
+
+            let transformValue = Math.random() * 360;
+            body.appendChild(heart);
+            heart.style.transform = 'rotate(' + transformValue + 'deg)'
+            setTimeout(function () {
+                heart.remove();
+            }, 1000);
+        });
+    </script>
+    
+
+    <div class="container" id="letterContainer">
+        <h1>Dear Pratiksha (Cutiepie),</h1>
+        <p>I hope this letter finds you well. I've been thinking a lot lately about the moment I asked you to be mine,
+            and although you haven't given me an answer yet, I understand that you might need some time.</p>
+        <p>I want you to know that I appreciate your shyness and your desire to express yourself in your own way. It's
+            one of the things I love about you - your thoughtful nature and your ability to make every moment special.
+        </p>
+        <p>Every day with you feels like a gift, and I'm grateful for the love and happiness you bring into my life.
+            You're the most amazing person I've ever met, and I can't imagine my life without you.</p>
+        <p>So, as you take your time to find the right words, just know that my heart is open and waiting for you. I'll
+            be here, ready to listen whenever you're ready to share your feelings.</p>
+        <p class="signature">With all my love and patience,<br>Ajay</p>
+    </div>
+    
+</body>
+
+</html>
