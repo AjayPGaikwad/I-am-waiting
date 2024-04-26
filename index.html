@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    
+     <audio controls autoplay loop>
+        <source src="song.mp3" type="audio/mpeg"> 
+        Your browser does not support the audio element.
+    </audio>
     <script>
-        alert("Play The Song Sweety!❤️");
         document.addEventListener('mousemove', function (e) {
             let body = document.querySelector('body');
             let heart = document.createElement('span');
@@ -32,6 +34,7 @@
                 heart.remove();
             }, 1000);
         });
+         alert("Play The Song Sweety!❤️");
     </script>
     
 
